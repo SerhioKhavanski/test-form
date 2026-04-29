@@ -1,8 +1,4 @@
-import { defineConfig } from "vite";
-import { imagetools } from "vite-imagetools";
-
+import { defineConfig } from 'vite'
 export default defineConfig({
- plugins: [
-   imagetools()
- ]
-});
+ base: '/test-form/'
+})

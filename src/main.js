@@ -19,5 +19,6 @@ questions.forEach(question =>{
 
 form.append(button)
 button.addEventListener('click',()=>getScore(score,form,questions))
+console.log(button.dataset);
 app.append(form)
 

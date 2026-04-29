@@ -2,6 +2,7 @@ import getAnswers from "./getAnswers"
 export default function getQuestionBlock(questionBlock){
   const block = document.createElement('div')
   block.classList.add('question-block')
+  block.dataset.questionId = questionBlock.questionId
 
   const questionText = document.createElement('h3')
   questionText.textContent = questionBlock.question
