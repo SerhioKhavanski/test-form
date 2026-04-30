@@ -8,9 +8,15 @@ export default function getQuestionBlock(questionBlock){
   questionText.textContent = questionBlock.question
   block.append(questionText)
 
+  const errorMessageBlock = document.createElement('div')
+  errorMessageBlock.classList.add('question-block__error')
+  const errorText = document.createElement('p')
+  errorText.textContent = ""
+  errorMessageBlock.append(errorText)
+  
   questionBlock.answers.forEach(answer => {
     block.append(getAnswers(answer,questionBlock.questionId))
   })
-
+  block.append(errorMessageBlock)
   return block
 }
